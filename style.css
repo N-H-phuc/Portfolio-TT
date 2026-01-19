@@ -1,0 +1,275 @@
+﻿/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #e6f4fb;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+nav a {
+  color: #e5e7eb;
+  margin-left: 26px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* ===== SECTION CHUNG ===== */
+section {
+  padding: 140px 8% 100px;
+  min-height: 100vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+/* ===== HOME ===== */
+#home {
+  text-align: center;
+}
+
+#home img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  border: 4px solid #38bdf8;
+}
+
+#home h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+#home h3 {
+  font-size: 20px;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+#home p {
+  max-width: 650px;
+  margin: 0 auto 32px;
+  color: #475569;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  border-radius: 30px;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ===== ABOUT & SKILLS ===== */
+#about {
+  background: #e6f4fb;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+}
+#skills {
+  background: #e6f4fb;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+        
+}
+
+
+#about .section-title,
+#skills .section-title {
+  grid-column: 1 / -1;
+}
+
+/* CARD */
+.about-box {
+  background: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  transition: 0.3s;
+}
+
+.about-box:hover {
+  transform: translateY(-6px);
+}
+
+.about-box h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #2563eb;
+}
+
+.about-box ul {
+  padding-left: 18px;
+}
+
+/* ===== PROJECTS ===== */
+#projects {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+.project-card a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+  background: linear-gradient(180deg, #f1f5f9, #ffffff);
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 26px;
+  margin-bottom: 14px;
+  color: #2563eb;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 14px;
+}
+
+/* FORM */
+.contact-form {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav a {
+    margin-left: 14px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+nav a.active {
+  color: #38bdf8;
+  position: relative;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #38bdf8;
+}
+
